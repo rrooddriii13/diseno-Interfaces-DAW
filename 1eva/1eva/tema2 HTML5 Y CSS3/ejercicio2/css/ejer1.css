@@ -1,0 +1,26 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    margin-right: 25px;
+    margin-left: 20px;
+}
+
+#navegacion a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(206, 206, 65, 0.45);
+    transition: background-color 2.5s, color 2.5s;
+    border: 2px solid black;
+}
+
+#navegacion a:hover {
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,36 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    margin-right: 25px;
+    margin-left: 20px;
+}
+
+#navegacion a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: transparent;/* Sin color de fondo */
+    transition: color 0.3s;
+}
+
+#navegacion li a:focus {
+    outline: none;/* Quitar el borde por defecto del foco */
+}
+
+#navegacion li:nth-child(1) a:focus {
+    border-left: 5px solid red;/* Borde rojo para Inicio */
+}
+
+#navegacion li:nth-child(2) a:focus {
+    border-left: 5px solid green;/* Borde verde para Viajes */
+}
+
+#navegacion li:nth-child(3) a:focus {
+    border-left: 5px solid blue;/* Borde azul para Contacto */            
+}

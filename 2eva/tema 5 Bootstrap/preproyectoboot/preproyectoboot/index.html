@@ -1,0 +1,234 @@
+<!-- Declaración del documento HTML con el idioma español -->
+<html lang="es">
+
+<head>
+    <!-- Metadatos del documento -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Enlace a la hoja de estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Título de la página -->
+    <title>La aventura</title>
+    <!-- Favicon de la página -->
+    <link rel="shortcut icon" href="./img/logo.jpeg">
+    <!-- Estilos CSS personalizados -->
+    <style>
+        /* Tamaño de fuente base para el documento */
+        html {
+            font-size: 100%;
+        }
+
+        /* Estilos para la imagen del logo en la marca de la navbar */
+        a.navbar-brand h1 img {
+            max-width: 160px;
+            max-height: 160px;
+        }
+
+        /* Estilos para el texto de la marca de la navbar */
+        a.navbar-brand h1 span {
+            color: rgb(15, 134, 134);
+        }
+
+        /* Tamaño de fuente para los párrafos */
+        p {
+            font-size: 1em;
+        }
+
+        /* Tamaño de fuente para los encabezados h2 */
+        h2 {
+            font-size: 1.5em;
+        }
+
+        /* Tamaño de fuente para los encabezados h1 */
+        h1 {
+            font-size: 2em;
+        }
+
+        /* Estilos para las imágenes del carrusel */
+        .carousel-inner .carousel-item img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Eliminar espacios entre artículos */
+        .row > [class*='col-'] {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 767px) {
+            html {
+                font-size: 0.75em;
+            }
+
+            a.navbar-brand h1 img {
+                width: 20%;
+                height: 20%;
+            }
+
+            .carousel-inner .carousel-item img {
+                height: 20vh;
+            }
+        }
+
+        /* Estilo para alinear verticalmente el botón y el campo de entrada en el formulario de búsqueda */
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .search-form input {
+            margin-top: 0.5em;
+        }
+
+        /* Estilos personalizados para los botones de navegación */
+        .navbar-nav .btn {
+            font-size: 0.8em; /* Ajusta el tamaño de la fuente */
+            padding: 0.5em 1em; /* Ajusta el padding */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado del documento -->
+    <header class="container-fluid">
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-xl navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Marca de la navbar -->
+                <a class="navbar-brand" href="index.html">
+                    <h1 class="mb-0 d-flex align-items-center">
+                        <img src="./img/logo.jpeg" alt="Logo" title="Ir a la página principal">
+                        <span class="ms-2">La aventura</span>
+                    </h1>
+                </a>
+
+                <!-- Botón de colapso para la navbar en pantallas pequeñas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botones">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Contenido colapsable de la navbar -->
+                <div class="collapse navbar-collapse" id="botones">
+                    <!-- Botones de navegación -->
+                    <div class="navbar-nav ms-auto">
+                        <button class="btn btn-primary p-3 m-1 m-lg-3" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Busca las mejores rutas de senderismo">Rutas de senderismo</button>
+                        <button class="btn btn-primary p-3 m-1 m-lg-3" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Busca las mejores rutas de acampada">Rutas de acampada</button>
+                    </div>
+                    <!-- Formulario de búsqueda -->
+                    <form class="d-flex my-2 my-xl-0 search-form">
+                        <button class="btn btn-outline-success mb-2" type="submit">Buscar</button>
+                        <input class="form-control me-2" type="search" placeholder="Introduzca la búsqueda..."
+                            aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal del documento -->
+    <main class="container-fluid">
+        <!-- Sección del carrusel -->
+        <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores del carrusel -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Imágenes del carrusel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/caminata.jpeg" class="d-block w-100" alt="Caminata por el Maigmó">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/mirador.jpg" class="d-block w-100" alt="Mirador del Maigmó">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/ruta.jpg" class="d-block w-100" alt="Ruta por el Maigmó">
+                </div>
+            </div>
+
+            <!-- Controles del carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <!-- Sección de artículos -->
+        <section class="row mt-4 g-4 align-items-stretch">
+            <!-- Primer artículo -->
+            <article class="col-md-6 d-flex">
+                <div class="card p-3 h-100 d-flex flex-column">
+                    <div class="card-body flex-grow-1">
+                        <p>Longitud: 2,5 kilómetros.</p>
+                        <p>Duración: 1 hora.</p>
+                        <p>Desnivel positivo: 300 metros.</p>
+                        <p>Tipo de ruta: ida y vuelta por el mismo camino.</p>
+                        <p>Dificultad: moderada.</p>
+                        <p>Esta es, tal vez, la ruta más fácil y corta para subir a la cumbre del Maigmó (1296 msnm),
+                            ya que tiene su punto de partida en el área recreativa del Balcón de Alicante.</p>
+                        <p>Aun siendo la más fácil, esta ruta no es un simple paseo por la montaña, pues requiere superar
+                            unos 300 metros de desnivel.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="#" class="btn btn-primary btn-sm">Ir al inicio</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Segundo artículo -->
+            <article class="col-md-6 d-flex">
+                <div class="card p-3 h-100 d-flex flex-column">
+                    <h2>Acampada del año: Remar y acampar en Estados Unidos</h2>
+                    <div class="card-body flex-grow-1">
+                        <p>Me desperté en mi tienda de campaña, el resplandor del
+                            amanecer ya atravesaba la lona ya igual que el sonido del
+                            agua del río a unos pasos de distancia...</p>
+                        <p>Mis compañeros pronto se unieron a mí y escuchamos el coro de
+                            grillos y pájaros madrugadores mientras mirábamos el río...</p>
+                        <p>El día anterior, nos habíamos situado a unos tres kilómetros
+                            río arriba y tomamos el primer campamento que pudimos encontrar...</p>
+                        <p>Antes de que los dos ríos se unan, St. Croix, y el Namekagon se
+                            elevan formando modestos arroyos en el noroeste de Wisconsin...</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="#" class="btn btn-primary btn-sm">Ir al inicio</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="container-fluid mt-4 pb-3">
+        <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Barra de herramientas en el pie">
+            <div class="btn-group" role="group" aria-label="El grupo de botones">
+                <button class="btn btn-danger p-3 m-1 m-lg-3" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Infórmate bien">Aviso Legal</button>
+                <button class="btn btn-danger p-3 m-1 m-lg-3" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Contacta con nosotros ...">Contacto</button>
+            </div>
+            <div class="alert alert-danger m-1 m-lg-3 mb-0" role="alert">
+                Copyright: diwdaw.iessanvicente.com © 2022
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace al script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Mi centro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Inserta aquí el CSS de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        /* la clase icon (será una imagen) que esté contendida dentro de los h1
+            - ancho 30px
+            - alto 30 px
+            - se visualiza en linea pero como bloque
+            - su fondo escala la imagen al mayor tamaño posible sin recortarla ni estirarla 
+            - su fondo es de imagen centrada
+            - su fondo es de imagen no se repite
+        */
+
+        /* la clase  icon-news 
+            - su fondo es de url icons/news.png
+        */ 
+
+        /* la clase  icon-studies 
+            - su fondo es de url icons/studies.png
+        */
+    
+        /* la clase  icon-contact 
+            - su fondo es de url icons/contact.png
+        */
+
+        /*
+            Las etiquetas footer que tengan la clase footer
+
+            - Tamaño de la caja es borde de la caja (no el contenido), prefijo -moz
+            - Tamaño de la caja es borde de la caja (no el contenido), prefijo -webkit
+            - Tamaño de la caja es borde de la caja (no el contenido)
+            - posición fijada
+            - espacio de abajo 0px
+            - padding 5px
+            - ancho 100%
+            - color de fondo #007BFF
+            - color blanco
+        */
+
+        /*
+            La clase fila2
+                - Tiene un padding de 20px
+        
+        */
+
+        /*
+            La clase fila2
+                - Tiene un padding de 20px
+        */
+
+         /*
+            La clase navbar-brand
+                - Tiene un padding a la izquierda de 10px
+        */
+
+        /*
+            El identificador accordion
+                - Tiene un padding arriba de 10px  
+        */
+
+        /* 
+            Los enlaces dentro del identificador accordion
+                -   Eliminar subrayado en enlaces 
+        */
+
+        /* 
+            Los inputs con el atributo type ="search"
+                - color de fondo es bisque 
+                - color es azul
+        
+        */      
+
+    </style>
+</head>
+
+<body>
+    <!-- inserta aquí abajo el div container-fluid para que ocupe toda la página-->
+    <div class="">
+
+        <!-- inserta abajo una fila (1º row) donde irá el menú-->
+        <div class="">
+
+            <!-- Inserta abajo el menú, debes tener en cuenta que el menú deberá 
+            ocupar todo el ancho de la pantalla siempre, el color que usaremos será
+            el de la clase bg-primary. Debes de tener en cuenta lo siguiente:
+
+            - Es una barra de navegación
+            - Se expandirá a partir de sm
+            - Ocupará 12 columnas
+            - Color de texto light de los navbar
+            - El background es bg-primary 
+            - Juega con el padding para que quede
+              bien y los elementos internos no se peguen al borde
+            -->
+            <nav id="menu">
+
+                <!-- - Inserta abajo un botón toggler visible solo en xs, 
+                     - El botón está colapsado (cerrado, no desplegado) 
+                     - El botón apunta a los datos del menú del indentificador #despelgable
+                     - Meter un margen bottom para evitar solapamientos 
+                 -->
+                <button class="" >
+                    <!--Inserta abajo un icono 
+                    navbar-toggler de bootstrap(class de bootstrap) -->
+                    <span ></span>
+                </button>
+
+
+                <!--
+                    Inserta abajo un enlace en donde aparece el nombre de la empresa
+                    (class de bootstrap) y está en texto en blanco (class de bootstrap) 
+                -->
+                <a class="" href="#">Mi instituto</a>
+
+                <!--Abajo el desplegable id="desplegable" está colapsado(cerrado, no desplegado) 
+                (class de bootstrap), es un menú colapsable del tipo navbar (class de bootstrap), y 
+                cuando es de tamaño xs se despliega en bloque (class de bootstrap)
+                -->
+                <div class=""  id="desplegable">
+
+                    <!-- Abajo hay una lista desordenada con las
+                         siguientes características: 
+                        
+                        - Es un navbar-nav, con nav-pills
+                        - el background es primary
+                        - Es en ul en donde tenemos que pensar cómo alinear el menú
+                        -  a la derecha, y eso se consigue con ms-auto(margin-left:auto 
+                           en bootstrap) dentro de ul . ms-auto es una clase. ms-auto
+                           recordar que conseguía alinear en flex a la derecha
+                    --> 
+                    <ul class="">
+                        <!-- La lista desordenada de arriba tiene los li de abajo -->
+
+                        <!-- Abajo el 1º li como un item del nav (class de bootstrap)
+                             está activo (class de bootstrap)
+                         -->
+                        <li class="">
+                            <!-- Abajo el link del nav (class de bootstrap)
+                            tiene color blanco (class de bootstrap)
+                            Además su aria-current es "page". Explica aquí mismo que es
+                            aria-current"  -->
+                            <a class="" href="#">
+                                Nuestro centro
+                            </a>
+                        </li>
+                        <!-- Abajo el 2º li como un item del nav (class de bootstrap)
+                        está activo (class de bootstrap). Es un dropdown -->
+                        <li class="">
+                            <!-- 
+                            - Abajo el link del nav (class de bootstrap) 
+                              tiene color blanco (class de bootstrap)
+                            - Es un toggle de un dropdown (class de bootstrap)
+                            - Es un enlace que hace el papel de botón (role)
+                            - El dropdown está justo abajo, para ello el data toggle debe especificarse 
+                              como drowdown
+                            - Además su aria-expanded es "false". Explica aquí mismo que es
+                              aria-expanded"  -->                  
+                            <a class="" href="#" >Enseñanzas</a>
+
+                            <!-- El link de arriba como es un toggle tipo dropdown (class de bootstrap)
+                                 tiene una lista desordenada justo a continuación abajo
+                                - Esa lista desordenada de abajo es un menú del tipo dropdown 
+                             -->
+                            <ul class="dropdown-menu">
+                                <!--  Un item del dropdown (class de bootstrap) -->
+                                <li><a class="" href="#admyGestion">Administración y gestión</a></li>
+                                <!--  Un item del dropdown (class de bootstrap) -->
+                                <li><a class="" href="#infoyComunica">Informática y comunicaciones</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Abajo el 3º li como un item del nav (class de bootstrap)
+                        está activo (class de bootstrap). Es un dropdown -->
+                        <li class="">
+                        <!-- 
+                            - Abajo el link del nav (class de bootstrap) 
+                              tiene color blanco (class de bootstrap)
+                            - Es un toggle de un dropdown (class de bootstrap)
+                            - Es un enlace que hace el papel de botón (role)
+                            - El dropdown está justo abajo, para ello el data toggle debe especificarse 
+                              como drowdown
+                            - Además su aria-expanded es "false". Explica aquí mismo que es
+                              aria-expanded"  -->  
+                                <a class="" href="#">Alumnado</a>
+                                 <!-- El link de arriba como es un toggle tipo dropdown (class de bootstrap)
+                                 tiene una lista desordenada justo a continuación abajo
+                                - Esa lista desordenada de abajo es un menú del tipo dropdown 
+                        -->
+                            <ul class="">
+                                <!--  Un item del dropdown (class de bootstrap) -->
+                                    <li><a class="" href="#calendario">Calendario escolar</a></li>
+                                    <!--  Un item del dropdown (class de bootstrap) -->
+                                    <li><a class="" href="#servicios">Servicios</a></li>
+                                    <!--  Un item del dropdown (class de bootstrap) -->
+                                    <li><a class="" href="#documentos">Documentos</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Abajo el 4º li como un item del nav (class de bootstrap)
+                        -->
+                        <li class="">
+                            <!-- Justo abajo un link del nav (class de bootstrap)
+                            tiene color blanco (class de bootstrap) 
+                            -->
+                            <a class="" href="#">
+                                Profesorado
+                            </a>
+                        </li>
+                            
+                        <!-- Abajo el 5º li como un item del nav (class de bootstrap)
+                        -->
+                        <li class="nav-item">
+                            <!-- Justo abajo un link del nav (class de bootstrap)
+                            tiene color blanco (class de bootstrap) 
+                            -->
+                            <a class="nav-link text-white" href="#">
+                                Moodle
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--Justo abajo el formulario se visualiza como flex (class de bootstrap)
+                        Tiene su atributo role de valor search.
+                        Explica aquí que es un role search-->
+                    <form class="" >
+                        <!--Justo abajo el formulario tiene abajo un boton del tipo submit
+                        con colores como aparece en la documentación
+                        -->
+                        <button class="">Buscar</button>
+                            <!--Justo abajo el formulario tiene abajo un input de control de formulario (class de bootstrap)
+                            del tipo search 
+                            El margen final es de 2 (margin end) (class de bootstrap)
+                            Por defecto aparece "buscar..."
+                            Tiene como aria-label valor "search". Explica aquí que es eso
+                            -->
+                            <input>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <!-- Arriba ya hemos terminado el menú -->
+
+        <!-- Inserta otra fila aquí (2º row), y dale un padding de 20px
+             (arriba está en style con clase fila2 que ya lo hace)
+             Tiene un login y un contenido , ambos responsive después
+        -->
+        <div class="row fila2">
+
+            <!-- Abajo el login es un formulario que será de tamaño 3 mientras
+             que la resolución no sea xs que pasará a ocupar toda la
+            pantalla -->
+            <form>
+                <!-- Justo abajo grupo de formulario (class de bootstrap) -->
+                <div class="">
+                    <!-- input text con valor inicial "Usuario" 
+                    control de formulario (class de bootstrap) -->
+                    <input>
+                </div>
+                <!-- Justo abajo grupo de formulario (class de bootstrap) -->
+                <div class="">
+                    <!-- Justo abajo input password con valor inicial "Contraseña" 
+                    control de formulario (class de bootstrap) -->
+                    <input>
+                </div>
+                <!-- Justo abajo botón del tipo submit. Ese botón ocupa TODO su espacio (12 columnas
+                      dentro del formulario)
+                     es del tipo que aparece en la documentación (btn-primary)
+                 -->
+                <button>Submit</button>
+            </form>
+
+          <!-- Justo abajo El contenido será de tamaño 9 columnas
+                Pero si la resolución no sea xs que pasará a ocupar toda la pantalla -->
+          <div class="">
+              <!-- Importante, este contenido  será realizado en forma collapse/accordion
+                 toggle item, donde por defecto se verá al principio sólo
+                la información de novedades, pero si pinchamos sobre cualquier
+                 item (novedades, estudios ofertados o contacto se desplegará
+                y nos mostrará su contenido o lo ocultará
+            
+                Interesa esta dirección:
+
+                https://getbootstrap.com/docs/5.1/components/accordion/
+                
+                -->
+               <!-- Justo abajo, el identificador "accordion" hace role como 
+                    un tablist
+                 --> 
+
+              <div id="accordion" role="tablist">
+
+                  <!--Aquí abajo podríamos poner varios accordion-item, 
+                    siguiendo la dirección web de arriba,
+                    pero vamos a poner varios card (class de bootstrap),
+                     así repasamos los cards  -->
+                  <div class="card">
+
+                     <!-- Justo abajo ponemos una cabecera de card (class de bootstrap)
+                        cuyo role "tab" ,  y cuyo identificador sea "headingOne"-->
+                      <div class="card-header" role="tab" id="headingOne">
+
+                          <!-- justo abajo de mb tendrá 0 (class de bootstrap)  -->
+                          <h1 class="mb-0">
+                              <!-- 
+                                Justo abajo un enlace apuntará a datos colapsados:
+                                - data-bs-toggle(los datos apuntados por el enlace) serán de tipo collapse
+                                - los daos están mas adelante identificados por un id llamado "#collapseOne"
+                                - aria-expanded será "true" (explica aquí que es esto)
+                                - aria-controls será"collapseOne" (explica aquí que es esto)
+                              -->
+                              <a>
+                                  <!--
+                                    El icono tendrá e clases icon icon-news
+                                  -->
+                                  <i></i> Novedades
+                              </a>
+                          </h1>
+                      </div>
+
+                      <!-- 
+                        - id "collapseOne"
+                        - es un collapse show(class de bootstrap)
+                        - El role es tabpanel (esto se relaciona con el role tab del anterior)
+                        - Su data-parent es el identificador "#accordion"
+                        - Explica aquí que es aria-labelledby="headingOne", lo lleva también
+                      -->
+                      <div id="collapseOne">
+                          <!-- Justo abajo es un body de card (class de bootstrap) -->
+                          <div>
+                              <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat
+                                  dictum vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend
+                                  risus nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus
+                                  nulla sit amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent
+                                  gravida turpis felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam
+                                  blandit luctus enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis
+                                  enim, ut consectetur tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae
+                                  dui convallis, tempor lacus et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor,
+                                  purus magna euismod diam, a volutpat lacus ligula nec ante. Cras eget ultrices urna. Nullam at
+                                  massa rhoncus, malesuada massa eu, vulputate quam. Ut vel rutrum justo. Donec quis lorem quam.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Otro card, el 2º -->
+                  <div class="card">
+
+                        <!-- Justo abajo ponemos una cabecera de card (class de bootstrap)
+                        cuyo role "tab" ,  y cuyo identificador sea "headingTwo"-->
+                      <div>
+
+                          <!-- justo abajo de mb tendrá 0 (class de bootstrap)  -->
+                          <h1 class="mb-0">
+                        
+                            <!-- Justo abajo un enlace apuntará a datos colapsados:
+                            - data-bs-toggle(los datos apuntados por el enlace) serán de tipo collapse
+                            - los datos están mas adelante identificados por un id llamado "#collapseTwo"
+                            - aria-expanded será "true" (explica aquí que es esto)
+                            - aria-controls será"collapseTwo" (explica aquí que es esto)
+                            -->
+                              <a>
+                                  <!--
+                                    El icono tendrá e clases icon icon-studies
+                                  -->
+                                  <i></i> Estudios ofertados
+                              </a>
+                          </h1>
+                      </div>
+                      <!-- 
+                        - id "collapseTwo"
+                        - es un collapse(class de bootstrap)
+                        - El role es tabpanel (esto se relaciona con el role tab del anterior)
+                        - Su data-parent es el identificador "#accordion"
+                        - Explica aquí que es aria-labelledby="headingTwo", lo lleva también
+                      -->
+                      <div id="collapseTwo">
+
+                        <!-- Justo abajo es un body de card (class de bootstrap) -->
+                          <div>
+                              <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat
+                                  dictum vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend
+                                  risus nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus
+                                  nulla sit amet tortor varius,
+                                  non elementum purus viverra. Suspendisse quis ipsum orci. Praesent gravida turpis felis, eu blandit
+                                  magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam blandit luctus enim eget pharetra.
+                                  Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim, ut consectetur tortor orci et leo.
+                                  In vitae magna in velit dapibus sollicitudin. Nam vitae dui convallis, tempor lacus et, placerat nibh.
+                                  Vivamus vehicula, nunc lacinia venenatis tempor, purus magna euismod diam, a volutpat lacus ligula nec
+                                  ante. Cras eget ultrices urna. Nullam at massa rhoncus, malesuada massa eu, vulputate quam. Ut vel
+                                  rutrum justo. Donec quis lorem quam.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+
+                     <!-- El último card, el 3º -->
+                      <div class="card">
+
+                        <!-- Justo abajo ponemos una cabecera de card (class de bootstrap)
+                        cuyo role "tab" ,  y cuyo identificador sea "headingThree"-->
+                          <div>
+                              <!-- justo abajo de mb tendrá 0 (class de bootstrap)  -->
+                              <h1 class="mb-0">
+
+                            <!-- Justo abajo un enlace apuntará a datos colapsados:
+                            - data-bs-toggle(los datos apuntados por el enlace) serán de tipo collapse
+                            - los datos están mas adelante identificados por un id llamado "#collapseThree"
+                            - aria-expanded será "true" (explica aquí que es esto)
+                            - aria-controls será"collapseThree" (explica aquí que es esto)
+                            -->    
+                                  <a>
+                                    <!--
+                                        El icono tendrá e clases icon icon-contact
+                                    -->
+                                      <i></i> Contactar
+                                  </a>
+                              </h1>
+                          </div>
+                        <!-- Justo abajo
+                        - id "collapseThree"
+                        - es un collapse(class de bootstrap)
+                        - El role es tabpanel (esto se relaciona con el role tab del anterior)
+                        - Su data-parent es el identificador "#accordion"
+                        - Explica aquí que es aria-labelledby="headingThree", lo lleva también
+                      -->
+                          <div>
+                             <!-- Justo abajo es un body de card (class de bootstrap) -->
+                              <div class="card-body">
+                                  <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat
+                                      dictum vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend
+                                      risus nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus
+                                      nulla sit amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent
+                                      gravida turpis felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam
+                                      blandit luctus enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis
+                                      enim, ut consectetur tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae
+                                      dui convallis, tempor lacus et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor,
+                                      purus magna euismod diam, a volutpat lacus ligula nec ante. Cras eget ultrices urna. Nullam at
+                                      massa rhoncus, malesuada massa eu, vulputate quam. Ut vel rutrum justo. Donec quis lorem quam.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--Cierra el row-->
+          <!-- El footer  -->
+          <footer class="footer w-100 bg-primary text-white">Curso Cefire - Diseño de interfaces web: Bootstrap, Sass y compass</footer>
+        </div> <!--Cierra el 2º row-->
+    </div> <!--Cierra div container-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+  
+  </html>
+  

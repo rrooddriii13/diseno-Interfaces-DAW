@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    background-color:blue;
+    padding: 20px;
+    position: relative;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+ul {
+    gap: 50px;
+    list-style: none;
+    flex-direction: column;
+}
+
+li {
+    margin: 0px 50px 80px 0px;
+}
+
+
+.item img:first-child {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.grande {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 4s, opacity 4s;
+    z-index: 1;
+
+}
+
+.item:hover .grande {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* muestra la ultima por defecto */
+
+#imgfija{
+    visibility: visible;/*Para que quede la imagen fija con z-index inferior*/
+    opacity: 1;
+    z-index: 0;
+  }

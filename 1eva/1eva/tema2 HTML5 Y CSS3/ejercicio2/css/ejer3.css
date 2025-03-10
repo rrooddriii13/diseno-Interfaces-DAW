@@ -1,0 +1,20 @@
+figure {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: top 2.5s;
+}
+
+figure:hover figcaption {
+    top: 10%;/*q baje hasta el 10*/
+}

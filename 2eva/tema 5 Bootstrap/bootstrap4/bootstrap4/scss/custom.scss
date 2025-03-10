@@ -1,0 +1,18 @@
+
+$primary: green;
+
+$link-hover-color:lighten($primary,10%);
+
+$fuente: Georgia,"Times New Roman",Times,serif;
+
+$font-family-base:$fuente;
+
+$input-border-radius: 5px;
+
+$dropdown-bg: black;
+
+$dropbown-link-color: white;
+
+$dropdown-link-hover-color: $link-hover-color;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
